@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Waferlee Chrome Extension</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="/icon48.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a9781;
+            --primary-dark: #2d7a67;
+            --secondary: #51d1b3;
+            --bg-mint: #b9e9d7;
+            --bg-mint-light: #f1fefa;
+            --text-primary: #3a4943;
+            --text-secondary: #5a6a63;
+            --text-tertiary: #8a9a93;
+            --border: #d4e9e1;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f1fefa 0%, #ffffff 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(58, 151, 129, 0.1);
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-mint);
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--primary-dark);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul,
+        ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: var(--bg-mint-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .info-box {
+            background: #e0f2fe;
+            border-left: 4px solid #0284c7;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .success-box {
+            background: #dcfce7;
+            border-left: 4px solid var(--success);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table th {
+            background: var(--bg-mint-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background: var(--bg-mint-light);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0 4px;
+        }
+
+        .badge-yes {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .badge-no {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .badge-info {
+            background: #e0f2fe;
+            color: #075985;
+        }
+
+        strong {
+            color: var(--primary-dark);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary);
+        }
+
+        .toc {
+            background: var(--bg-mint-light);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc a {
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+
+        .contact-card {
+            background: var(--bg-mint-light);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            margin-top: 0;
+        }
+
+        .contact-card a {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .quick-summary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .quick-summary h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .quick-summary strong {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .data-table {
+                font-size: 14px;
+            }
+        }
+
+        .section {
+            scroll-margin-top: 20px;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--primary-dark);
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .permission-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .permission-list li {
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .permission-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 5px;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .no-collect-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .no-collect-list li {
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .no-collect-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 5px;
+            color: var(--error);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="icon48.png" alt="Waferlee Logo"></div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Waferlee Chrome Extension</p>
+            <p class="subtitle"><strong>Last Updated:</strong> November 8, 2025</p>
+        </header>
+
+        <!-- Quick Summary -->
+        <div class="quick-summary">
+            <h2>Quick Summary</h2>
+            <p><strong>What we collect:</strong></p>
+            <ul>
+                <li>Your searches and which stores you visit</li>
+                <li>Anonymous usage data to improve the extension</li>
+            </ul>
+            <p><strong>Why we collect it:</strong></p>
+            <ul>
+                <li>To find you coupons and compare prices</li>
+                <li>To make the extension work better</li>
+            </ul>
+            <p><strong>What we DON'T do:</strong></p>
+            <ul>
+                <li>❌ Sell your data</li>
+                <li>❌ Track you across the web</li>
+                <li>❌ See your passwords or personal info</li>
+            </ul>
+            <p><strong>Your rights:</strong></p>
+            <ul>
+                <li>✅ See your data anytime</li>
+                <li>✅ Delete your data anytime</li>
+                <li>✅ Turn off analytics</li>
+            </ul>
+
+            <p><strong>Questions?</strong> Email: <a href="mailto:privacy@waferlee.ae"
+                    style="color: white; text-decoration: underline;">privacy@waferlee.ae</a></p>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>📑 Table of Contents</h2>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#information-collected">Information We Collect</a></li>
+                <li><a href="#how-we-use">How We Use Your Information</a></li>
+                <li><a href="#data-sharing">Data Sharing and Third Parties</a></li>
+                <li><a href="#data-storage">Data Storage and Security</a></li>
+                <li><a href="#your-rights">Your Privacy Rights</a></li>
+                <li><a href="#children">Children's Privacy</a></li>
+                <li><a href="#permissions">Chrome Extension Permissions</a></li>
+                <li><a href="#changes">Changes to This Privacy Policy</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+            </ol>
+        </div>
+
+        <!-- 1. Introduction -->
+        <section id="introduction" class="section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to <strong>Waferlee</strong>("we," "our," or "us") . We are committed to protecting your privacy
+                while providing you with the best coupon-finding and price comparison experience for UAE online
+                shopping.</p>
+            <p>This Privacy Policy explains how our Chrome extension collects, uses, discloses, and safeguards your
+                information when you use Waferlee.</p>
+            <div class="highlight-box">
+                <p><strong>📌 By installing and using Waferlee, you agree to the collection and use of information in
+                        accordance with this policy.</strong></p>
+                <p>If you do not agree with our policies and practices, please do not install or use the extension.</p>
+            </div>
+        </section>
+
+        <!-- 2. Information We Collect -->
+        <section id="information-collected" class="section">
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 User Actions</h3>
+            <ul class="permission-list">
+                <li>Product searches you initiate via the extension</li>
+                <li>Coupon codes you copy</li>
+                <li>Links you click to visit stores</li>
+                <li>Modal interactions (minimize, close, open)</li>
+            </ul>
+
+            <h3>2.2 Automatically Collected Information</h3>
+
+            <p><strong>Browsing Data (Limited Scope):</strong></p>
+            <ul class="permission-list">
+                <li><strong>Current Tab URL:</strong> Only collected when you actively visit a partner shopping website
+                    to check for available coupons</li>
+                <li><strong>Selected Text:</strong> Only when you right-click and choose "Find Cheaper Deals"</li>
+                <li><strong>Domain Information:</strong> To identify if you're on a partner store and show relevant
+                    coupons</li>
+                <li><strong>Active Tab Information:</strong> To update the extension badge counter</li>
+            </ul>
+
+            <p><strong>Usage Data:</strong></p>
+            <ul class="permission-list">
+                <li>Timestamps of searches and coupon copies</li>
+                <li>Number of price comparisons performed</li>
+                <li>Search success/failure rates (anonymized)</li>
+                <li>Extension interaction events (tab switches, button clicks)</li>
+            </ul>
+
+            <p><strong>Technical Data:</strong></p>
+            <ul class="permission-list">
+                <li>Browser version and type (Chrome)</li>
+                <li>Extension version number</li>
+                <li>Error logs and crash reports (anonymized)</li>
+                <li>API response times (for performance monitoring)</li>
+            </ul>
+
+            <h3>2.3 Information We Do NOT Collect</h3>
+            <ul class="no-collect-list">
+                <li>Your browsing history beyond active shopping sessions</li>
+                <li>Personal identification information (name, email, phone)</li>
+                <li>Payment or credit card information</li>
+                <li>Passwords or login credentials</li>
+                <li>Full page content or form data</li>
+                <li>Information from non-shopping websites</li>
+                <li>Cross-site tracking or fingerprinting data</li>
+            </ul>
+        </section>
+
+        <!-- 3. How We Use Your Information -->
+        <section id="how-we-use" class="section">
+            <h2>3. How We Use Your Information</h2>
+
+            <h3>3.1 Primary Purposes</h3>
+            <p><strong>To Provide Core Functionality:</strong></p>
+            <ul class="permission-list">
+                <li>Automatically detect when you visit partner shopping websites</li>
+                <li>Search and display available coupon codes from our database and DCM Network API</li>
+                <li>Compare product prices across UAE online stores using Google Shopping data</li>
+                <li>Show available discounts and savings opportunities</li>
+                <li>Display personalized notifications based on your preferences</li>
+                <li>Maintain your recent price comparison history (stored locally, last 20 searches)</li>
+                <li>Update badge counter showing available coupon count for current website</li>
+            </ul>
+
+            <p><strong>To Improve User Experience:</strong></p>
+            <ul class="permission-list">
+                <li>Remember your settings and preferences across sessions</li>
+                <li>Avoid showing dismissed coupon notifications repeatedly (respects "closed" state per website)</li>
+                <li>Prioritize coupons from the website you're currently visiting (shown first with green badge)</li>
+                <li>Cache API results to reduce loading times (1 hour for coupons, 30 minutes for prices)</li>
+                <li>Paginate coupons (10 per page) for easier browsing</li>
+                <li>Filter duplicate coupons from multiple sources (DCM Network + Google Sheets)</li>
+            </ul>
+
+            <p><strong>To Maintain and Improve the Service:</strong></p>
+            <ul class="permission-list">
+                <li>Analyze aggregated usage patterns to identify popular features</li>
+                <li>Debug technical issues and application crashes</li>
+                <li>Monitor API performance and reliability (Google Sheets, SerpAPI, DCM Network)</li>
+                <li>Optimize search algorithms for better coupon matching</li>
+                <li>Rate limiting to prevent service abuse (5 SerpAPI requests/minute, 10 coupon checks/minute)</li>
+            </ul>
+
+            <h3>3.2 Legal Bases for Processing (GDPR/UAE DPA Compliance)</h3>
+            <p>We process your information based on:</p>
+            <ul>
+                <li><strong>Consent:</strong> You provide explicit consent by installing and using the extension</li>
+                <li><strong>Legitimate Interest:</strong> To operate and improve our service</li>
+                <li><strong>Contractual Necessity:</strong> To provide the features you've requested</li>
+            </ul>
+        </section>
+
+        <!-- 4. Data Sharing and Third Parties -->
+        <section id="data-sharing" class="section">
+            <h2>4. Data Sharing and Third Parties</h2>
+
+            <h3>4.1 Third-Party Services We Use</h3>
+            <p>Waferlee integrates with the following third-party services to provide functionality:</p>
+
+            <div class="info-box">
+                <p><strong>🔗 Google Apps Script (Data Proxy)</strong></p>
+                <ul>
+                    <li><strong>Purpose:</strong> Securely retrieves coupon data from our database</li>
+                    <li><strong>Data Shared:</strong> Domain of website you're visiting, anonymized search queries</li>
+                    <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
+                            target="_blank">Google Privacy Policy</a></li>
+                    <li><strong>Data Retention:</strong> Requests are not logged; responses cached temporarily</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <p><strong>🛒 SerpAPI (Price Comparison Service)</strong></p>
+                <ul>
+                    <li><strong>Purpose:</strong> Fetches real-time product prices from Google Shopping</li>
+                    <li><strong>Data Shared:</strong> Product name you select, country/language preferences</li>
+                    <li><strong>Privacy Policy:</strong> <a href="https://serpapi.com/privacy" target="_blank">SerpAPI
+                            Privacy Policy</a></li>
+                    <li><strong>Data Anonymization:</strong> No user identifiers sent; requests rate-limited per
+                        extension, not per user</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <p><strong>📊 DCM Network (Coupon Widget)</strong></p>
+                <ul>
+                    <li><strong>Purpose:</strong> Displays additional coupon offers in "Waferlee Codes" tab</li>
+                    <li><strong>Data Shared:</strong> None directly; widget loads in sandboxed iframe</li>
+                    <li><strong>Privacy Policy:</strong> <a href="https://dcmnetwork.com/privacy" target="_blank">DCM
+                            Network Privacy</a></li>
+                    <li><strong>Note:</strong> You can avoid this by not using the "Waferlee Codes" tab</li>
+                </ul>
+            </div>
+
+            <h3>4.2 Affiliate Partners</h3>
+            <p>When you click on product links or store websites through Waferlee, we may add affiliate tracking
+                parameters to support our service. This includes:</p>
+            <ul>
+                <li>Amazon.ae</li>
+                <li>Noon.com</li>
+                <li>Namshi.com</li>
+                <li>Sharaf DG</li>
+                <li>Carrefour UAE</li>
+                <li>Other UAE e-commerce partners</li>
+            </ul>
+            <div class="warning-box">
+                <p><strong>⚠️ What This Means:</strong></p>
+                <ul>
+                    <li>Stores know you came from Waferlee (not who you are)</li>
+                    <li>We may earn a commission if you make a purchase</li>
+                    <li>Your shopping data is governed by the store's privacy policy</li>
+                    <li>No personal information is shared by us</li>
+                </ul>
+            </div>
+
+            <h3>4.3 Data We Never Sell</h3>
+            <p><strong>We do NOT:</strong></p>
+            <ul class="no-collect-list">
+                <li>Sell your personal information to third parties</li>
+                <li>Share your browsing history with advertisers</li>
+                <li>Use your data for targeted advertising outside the extension</li>
+                <li>Provide individual user data to partners</li>
+            </ul>
+        </section>
+
+        <!-- 5. Data Storage and Security -->
+        <section id="data-storage" class="section">
+            <h2>5. Data Storage and Security</h2>
+
+            <h3>5.1 Where Your Data is Stored</h3>
+
+            <p><strong>Local Storage (On Your Device):</strong></p>
+            <ul class="permission-list">
+                <li>Recent price comparison history (last 20 searches)</li>
+                <li>Dismissed coupon notification states</li>
+                <li><strong>Duration:</strong> Until you uninstall the extension or clear data</li>
+            </ul>
+
+            <p><strong>Our Servers (Google Cloud Infrastructure - UAE/EU Regions):</strong></p>
+            <ul class="permission-list">
+                <li>Aggregated, anonymized usage statistics</li>
+                <li>Coupon database (no user-specific data)</li>
+                <li><strong>Duration:</strong> Anonymized analytics retained for 90 days</li>
+            </ul>
+
+            <h3>5.2 Security Measures</h3>
+
+            <p><strong>Technical Safeguards:</strong></p>
+            <ul class="permission-list">
+                <li>✅ All API communications use HTTPS/TLS encryption</li>
+                <li>✅ No passwords or credentials stored</li>
+                <li>✅ Content Security Policy (CSP) to prevent code injection</li>
+                <li>✅ Sandboxed iframes for third-party widgets</li>
+                <li>✅ Rate limiting to prevent abuse</li>
+                <li>✅ Regular security audits and updates</li>
+            </ul>
+
+            <p><strong>Access Controls:</strong></p>
+            <ul class="permission-list">
+                <li>Only essential team members can access aggregated data</li>
+                <li>No single person has access to decrypt individual user data</li>
+                <li>Multi-factor authentication required for all admin access</li>
+            </ul>
+
+            <h3>5.3 Data Breach Protocol</h3>
+            <p>In the unlikely event of a data breach:</p>
+            <ol>
+                <li>We will notify affected users within 72 hours</li>
+                <li>Report to UAE Data Office and relevant authorities</li>
+                <li>Provide guidance on protective measures</li>
+                <li>Conduct thorough investigation and implement fixes</li>
+            </ol>
+        </section>
+
+        <!-- 6. Your Privacy Rights -->
+        <section id="your-rights" class="section">
+            <h2>6. Your Privacy Rights</h2>
+
+            <h3>6.1 Under GDPR (EU Users) and UAE Data Protection Law</h3>
+            <p><strong>You have the right to:</strong></p>
+
+            <div class="highlight-box">
+                <p><strong>Access:</strong> Request a copy of all data we hold about you</p>
+                <ul>
+                    <li>Email: privacy@waferlee.ae</li>
+                    <li>Response time: 30 days</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Rectification:</strong> Correct inaccurate data</p>
+                <ul>
+                    <li>Update preferences in extension settings</li>
+                    <li>Contact us for server-side corrections</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Erasure ("Right to be Forgotten"):</strong> Delete your data</p>
+                <ul>
+                    <li>Uninstall extension (removes all local data)</li>
+                    <li>Email us to delete server-side analytics associated with your installation ID</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Data Portability:</strong> Export your data</p>
+                <ul>
+                    <li>Go to Settings → Advanced → Export Data</li>
+                    <li>Receive JSON file with all your stored information</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Object to Processing:</strong> Opt out of analytics</p>
+                <ul>
+                    <li>Settings → Privacy → Disable Usage Analytics</li>
+                    <li>Note: Core functionality data still collected</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Withdraw Consent:</strong> Stop using the service anytime</p>
+                <ul>
+                    <li>Uninstalling the extension = full consent withdrawal</li>
+                    <li>We retain anonymized aggregated data for 90 days</li>
+                </ul>
+            </div>
+
+            <h3>6.2 How to Exercise Your Rights</h3>
+            <p><strong>Email:</strong> privacy@waferlee.ae</p>
+            <p><strong>Subject:</strong> Privacy Rights Request - [Your Request Type]</p>
+            <p><strong>Include:</strong></p>
+            <ul>
+                <li>Extension Installation ID (Settings → About → Installation ID)</li>
+                <li>Specific request details</li>
+            </ul>
+            <p><strong>Response Time:</strong> 30 days for standard requests, 60 days for complex requests</p>
+        </section>
+
+        <!-- 7. Children's Privacy -->
+        <section id="children" class="section">
+            <h2>7. Children's Privacy</h2>
+            <p>Waferlee is not intended for users under 18 years of age.</p>
+            <ul>
+                <li>We do not knowingly collect information from minors</li>
+                <li>If we discover we've collected data from a minor, we will delete it immediately</li>
+                <li>Parents/guardians: Contact us at privacy@waferlee.ae to report underage use</li>
+            </ul>
+        </section>
+
+        <!-- 8. Chrome Extension Permissions -->
+        <section id="permissions" class="section">
+            <h2>8. Chrome Extension Permissions</h2>
+            <p>Waferlee requests the following permissions from Chrome. Here's why each one is needed:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Why We Need It</th>
+                        <th>What We Do With It</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>storage</code></td>
+                        <td>Save your preferences locally</td>
+                        <td>Store settings (region, currency, notifications), recent comparisons (last 20), modal states
+                            per website. All stored on YOUR device only.</td>
+                    </tr>
+                    <tr>
+                        <td><code>notifications</code></td>
+                        <td>Alert you about coupons</td>
+                        <td>Show browser notifications when better prices are found or to confirm actions (coupon
+                            copied). You can disable in settings.</td>
+                    </tr>
+                    <tr>
+                        <td><code>contextMenus</code></td>
+                        <td>Add right-click options</td>
+                        <td>Add "Find Cheaper Deals" and "Search Coupons" to your right-click menu for quick access.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>activeTab</code></td>
+                        <td>Read current website URL</td>
+                        <td>Detect which shopping website you're on to show relevant coupons. Only when tab is active.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>tabs</code></td>
+                        <td>Open product links</td>
+                        <td>Open product pages in new tabs when you click "View Product" buttons. Also update badge
+                            counter per tab.</td>
+                    </tr>
+                    <tr>
+                        <td><code>host_permissions</code><br>(https://*/*)</td>
+                        <td>Inject coupon notifications</td>
+                        <td>Display coupon modal on shopping websites you visit. Required to show coupons on any
+                            e-commerce site. Does NOT access banking, email, or sensitive sites.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- 9. Changes to This Privacy Policy -->
+        <section id="changes" class="section">
+            <h2>9. Changes to This Privacy Policy</h2>
+
+            <h3>9.1 Notification of Changes</h3>
+            <p>We may update this Privacy Policy periodically. When we do:</p>
+
+            <p><strong>For Minor Changes</strong> (clarifications, formatting):</p>
+            <ul>
+                <li>Update "Last Updated" date at top</li>
+                <li>No additional notification required</li>
+            </ul>
+
+            <p><strong>For Material Changes</strong> (new data collection, third parties):</p>
+            <ul>
+                <li>In-extension notification on next use</li>
+                <li>Email to users who provided contact info (if applicable)</li>
+                <li>30-day notice before changes take effect</li>
+                <li>Option to opt-out or uninstall before changes apply</li>
+            </ul>
+        </section>
+
+        <!-- 10. Contact Information -->
+        <section id="contact" class="section">
+            <h2>10. Contact Information</h2>
+
+            <div class="contact-card">
+                <h3>📧 Data Controller</h3>
+                <p><strong>Email:</strong> <a href="mailto:privacy@waferlee.ae">privacy@waferlee.ae</a></p>
+                <p><strong>Support:</strong> <a href="mailto:support@waferlee.ae">support@waferlee.ae</a></p>
+            </div>
+
+            <h3>10.1 Supervisory Authority</h3>
+            <p>If you're unsatisfied with our response, you can contact:</p>
+
+            <p><strong>UAE Data Office</strong></p>
+            <ul>
+                <li>Email: dataoffice@tdra.gov.ae</li>
+                <li>Website: <a href="https://tdra.gov.ae" target="_blank">https://tdra.gov.ae</a></li>
+            </ul>
+
+            <p><strong>EU Users (GDPR)</strong></p>
+            <ul>
+                <li>Your local Data Protection Authority</li>
+                <li>List: <a href="https://edpb.europa.eu/about-edpb/board/members_en" target="_blank">European Data
+                        Protection Board</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>11. Consent and Agreement</h2>
+            <div class="highlight-box">
+                <p><strong>📌 By installing and using Waferlee, you acknowledge that you have read, understood, and
+                        agree to this Privacy Policy.</strong></p>
+                <p><strong>If you do not agree,</strong> please do not install or use the extension.</p>
+                <p><strong>Consent is ongoing:</strong> Continued use after policy updates constitutes acceptance of
+                    changes.</p>
+                <p><strong>Withdrawal of consent:</strong> Uninstall the extension at any time.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p><strong>Document Version:</strong> 1.0</p>
+            <p><strong>Effective Date:</strong> November 8, 2025</p>
+            <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border);">
+            <p>© 2025 Waferlee. All rights reserved.</p>
+            <p>
+                <a href="mailto:support@waferlee.ae">Support</a> |
+                <a href="mailto:privacy@waferlee.ae">Privacy</a> |
+                <a href="#top">Back to Top ↑</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
